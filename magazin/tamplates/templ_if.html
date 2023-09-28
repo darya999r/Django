@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Создайте шаблон, который выводит список заказанных клиентом товаров из всех его заказов с сортировкой по времени:</title>
+</head>
+<body>
+<ul> {% for order in orders %}
+    {% if order.published %}
+        <li> <a href="#">{{ order.title }}</a></li>
+    {% else %}
+        <li> {{ order.title }}</li>
+    {% endif %}
+    {% endfor %}
+</ul>
+</body>
+</html>
